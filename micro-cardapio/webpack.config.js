@@ -51,7 +51,10 @@ module.exports = (env, argv) => {
 
         // O que este micro exporta para outros consumirem
         exposes: {
-          "./CardapioApp": "./src/bootstrap",
+          // Aponta para App.js (default export = componente React)
+          // React.lazy espera um módulo com default export de componente,
+          // não funções mount/unmount como o bootstrap.js exportava.
+          "./CardapioApp": "./src/App",
         },
 
         // Dependências compartilhadas — React só carrega UMA vez entre todos os micros

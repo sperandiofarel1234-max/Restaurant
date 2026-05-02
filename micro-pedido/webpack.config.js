@@ -46,7 +46,8 @@ module.exports = (env, argv) => {
 
         // Exporta o componente de pedido para o container
         exposes: {
-          "./PedidoApp": "./src/bootstrap",
+          // Aponta para App.js com default export de componente React
+          "./PedidoApp": "./src/App",
         },
 
         // React compartilhado — garante que só uma instância rode
