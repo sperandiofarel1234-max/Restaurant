@@ -3,7 +3,11 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/((?!.*\\.js|.*\\.css|.*\\.html|.*\\.map).*)",
+      "source": "/remoteEntry.js",
+      "destination": "/remoteEntry.js"
+    },
+    {
+      "source": "/((?!.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|map)).*)",
       "destination": "/index.html"
     }
   ]
