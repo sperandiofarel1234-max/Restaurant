@@ -1,0 +1,196 @@
+/* ── micro-pedido/styles.css ───────────────────────────────────────────────── */
+
+.micro-pedido {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1a1a1a;
+  height: 100%;
+}
+
+.lista-pedido {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lista-pedido__header {
+  margin-bottom: 1rem;
+}
+
+.lista-pedido__titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1a1a1a;
+}
+
+.lista-pedido__badge {
+  background: #c0392b;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estado vazio */
+.lista-pedido__vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.lista-pedido__vazio-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.lista-pedido__vazio p {
+  margin: 0.15rem 0;
+}
+
+.lista-pedido__vazio-dica {
+  font-size: 0.85rem;
+}
+
+/* Lista de itens */
+.lista-pedido__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Item do pedido */
+.item-pedido {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+
+.item-pedido__emoji {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.item-pedido__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-pedido__nome {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.item-pedido__subtotal {
+  font-size: 0.8rem;
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* Controles de quantidade */
+.item-pedido__controles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item-pedido__btn-ctrl {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.item-pedido__btn-ctrl:hover {
+  background: #f0f0f0;
+}
+
+.item-pedido__quantidade {
+  font-weight: 700;
+  min-width: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.lista-pedido__footer {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lista-pedido__total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+}
+
+.lista-pedido__total strong {
+  font-size: 1.2rem;
+  color: #c0392b;
+}
+
+.lista-pedido__btn-confirmar {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lista-pedido__btn-confirmar:hover {
+  background: #219a52;
+}
+
+.lista-pedido__btn-limpar {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #888;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lista-pedido__btn-limpar:hover {
+  background: #fef0f0;
+  color: #c0392b;
+  border-color: #c0392b;
+}

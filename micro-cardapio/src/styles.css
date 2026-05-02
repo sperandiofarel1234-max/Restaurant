@@ -1,0 +1,126 @@
+/* ── micro-cardapio/styles.css ─────────────────────────────────────────────── */
+
+.micro-cardapio {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1a1a1a;
+  padding: 1rem;
+}
+
+/* Lista principal */
+.lista-cardapio__header {
+  margin-bottom: 1.5rem;
+}
+
+.lista-cardapio__titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: #c0392b;
+}
+
+.lista-cardapio__subtitulo {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.lista-cardapio__categoria {
+  margin-bottom: 2rem;
+}
+
+.lista-cardapio__categoria-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.lista-cardapio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Item individual */
+.item-cardapio {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.item-cardapio:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.item-cardapio__emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.item-cardapio__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item-cardapio__nome {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.item-cardapio__descricao {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.item-cardapio__preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c0392b;
+  margin-top: 0.25rem;
+}
+
+.item-cardapio__btn {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+.item-cardapio__btn:hover {
+  background: #a93226;
+}
+
+.item-cardapio__btn:active {
+  transform: scale(0.97);
+}
+
+.item-cardapio__btn--adicionado {
+  background: #27ae60;
+}
+
+.item-cardapio__btn--adicionado:hover {
+  background: #219a52;
+}

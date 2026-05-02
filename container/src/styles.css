@@ -1,0 +1,141 @@
+/* ── container/styles.css ──────────────────────────────────────────────────── */
+
+/* Reset mínimo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Layout raiz */
+.container-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f4ef;
+}
+
+/* ── Cabeçalho ─────────────────────────────────────────────────────────────── */
+.container-header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1.25rem 2rem;
+  text-align: center;
+}
+
+.container-header__titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.container-header__subtitulo {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Layout principal (duas colunas) ─────────────────────────────────────────── */
+.container-layout {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+/* Coluna do cardápio — ocupa o espaço restante */
+.container-layout__cardapio {
+  flex: 1;
+  min-width: 0; /* evita overflow em flex */
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Divider visual entre as colunas */
+.container-layout__divider {
+  display: none; /* invisível — o gap já cria o espaço */
+}
+
+/* Coluna do pedido — largura fixa */
+.container-layout__pedido {
+  width: 340px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  align-self: flex-start;
+  position: sticky;
+  top: 1.5rem;
+}
+
+/* ── Estados de carregamento ─────────────────────────────────────────────────── */
+.loading-micro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #aaa;
+  gap: 1rem;
+}
+
+.loading-micro__spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #eee;
+  border-top-color: #c0392b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Erro de carregamento do micro ──────────────────────────────────────────── */
+.micro-error {
+  padding: 1.5rem;
+  background: #fff5f5;
+  border: 1px solid #fdd;
+  border-radius: 12px;
+  color: #c0392b;
+}
+
+.micro-error__dica {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+/* ── Rodapé ─────────────────────────────────────────────────────────────────── */
+.container-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: #bbb;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+/* ── Responsividade ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container-layout {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .container-layout__pedido {
+    width: 100%;
+    position: static;
+  }
+}
